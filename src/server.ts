@@ -47,6 +47,10 @@ app.register(checkIn)
 app.register(getEventAttendees)
 
 app.setErrorHandler(errorHandler)
+
+app.get('/hello', () =>{
+    return "Hello Devs"
+})
 app.listen({ port: 3333, host: '0.0.0.0' }).then(() => {
     console.log("HTTP server running ");
 })
