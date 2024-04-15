@@ -1,0 +1,34 @@
+POST http://localhost:3333/events
+Content-Type: application/json
+
+{ 
+    "title" : "Novo evento2",
+    "details" : null,
+    "maximumAttendees" : 2
+}
+
+###
+
+POST http://localhost:3333/events/ddccff41-3d0d-4d5a-a835-e5737cf25b29/attendees
+Content-Type: application/json
+
+{ 
+    "name" : "Diogo Gomes",
+    "email" : "diogogomes2002@gmail.com"
+}
+
+###
+
+GET http://localhost:3333/events/4ba55534-3a91-434e-a371-160feba9fcf7
+
+###
+
+GET http://localhost:3333/attendees/4/badge
+
+###
+
+GET http://localhost:3333/attendees/5/check-in
+
+###
+
+GET http://localhost:3333/events/ddccff41-3d0d-4d5a-a835-e5737cf25b29/attendees?query=Diogo
